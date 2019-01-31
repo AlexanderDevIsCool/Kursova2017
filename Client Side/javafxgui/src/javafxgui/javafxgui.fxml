@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?scenebuilder-stylesheet javafxgui.css?>
+
+<VBox fx:id="mainbox" prefHeight="450.0" prefWidth="1055.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@javafxgui.css" />
+    </stylesheets>  
+    <children>
+      <BorderPane fx:id="Split" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <left>
+            <VBox fx:id="LeftVbox" prefHeight="449.0" prefWidth="250.0" style="-fx-background-color: yellowgreen;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="70.0" prefWidth="250.0" style="-fx-background-color: white;" VBox.vgrow="NEVER">
+                     <children>
+                        <Button fx:id="logoButton" mnemonicParsing="false" onMouseClicked="#logoAction" prefHeight="70.0" prefWidth="85.0" />
+                        <ImageView fx:id="MyFoto" fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../../../CharChatResources/Pictures/defaulticon.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="Status" alignment="CENTER" prefHeight="18.0" prefWidth="100.0" textOverrun="CLIP">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="LabelName" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="97.0">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="LabelSecondName" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="102.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="250.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox prefWidth="250.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#FriendsToolButton" prefHeight="35.0" prefWidth="80.0" text="Друзі" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#ToolSearchUsers" prefHeight="35.0" prefWidth="80.0" text="Пошук" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#ToolSettingButton" prefHeight="35.0" prefWidth="80.0" text="Опції" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <AnchorPane fx:id="AcncorSearch" prefHeight="1.0" prefWidth="250.0">
+                     <children>
+                        <TextField fx:id="SearchTextField" onAction="#onEnter" prefHeight="30.0" prefWidth="249.0" />
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="301.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ListView fx:id="ListUsers" onMouseClicked="#ListUsersMouseCliecked" prefHeight="340.0" prefWidth="250.0" HBox.hgrow="ALWAYS" />
+                     </children></HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox fx:id="CenterVbox" prefHeight="455.0" prefWidth="537.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="386.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onLeftHide" prefHeight="60.0" prefWidth="120.0" text="Меню" HBox.hgrow="NEVER" />
+                        <Pane prefHeight="60.0" prefWidth="126.0" HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="ViewPhoto" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#onClientShowInfoImage" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../../../CharChatResources/Pictures/defaulticon.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="LabelWho" prefHeight="17.0" prefWidth="113.0">
+                           <HBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Pane prefHeight="60.0" prefWidth="126.0" HBox.hgrow="ALWAYS" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onRightHide" prefHeight="60.0" prefWidth="120.0" text="Ресурси" HBox.hgrow="NEVER" />
+                     </children>
+                  </HBox>
+                  <HBox prefWidth="537.0" style="-fx-background-color: green;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefWidth="537.0" HBox.hgrow="ALWAYS">
+                           <content>
+                              <HBox alignment="BOTTOM_LEFT" style="-fx-background-color: silver;">
+                                 <children>
+                                    <ListView fx:id="MessageList" onMouseClicked="#MessageListClick" prefHeight="428.0" prefWidth="553.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ListView>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="31.0" minHeight="31.0" prefHeight="31.0" prefWidth="537.0" style="-fx-background-color: ;">
+                     <children>
+                        <TextField fx:id="SendText" prefHeight="31.0" prefWidth="424.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="SendButton" mnemonicParsing="false" onAction="#SendButtonHandler" prefHeight="31.0" prefWidth="54.0" text="send">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="fileChooseButton" mnemonicParsing="false" onMouseClicked="#FileChooseButtonAction" prefHeight="31.0" prefWidth="59.0" text="File" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox fx:id="RightVbox" prefHeight="449.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Accordion prefHeight="487.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                     <panes>
+                        <TitledPane animated="false" onMouseClicked="#fileAcordioClick" text="Файли">
+                           <content>
+                              <AnchorPane fx:id="AnchorFiles" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" onMouseClicked="#imageAcordioClick" text="Зображення">
+                           <content>
+                              <AnchorPane fx:id="AnchorImage" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" onMouseClicked="#audioAcordioClick" text="Аудіо">
+                           <content>
+                              <AnchorPane fx:id="AnchorAudio" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</VBox>

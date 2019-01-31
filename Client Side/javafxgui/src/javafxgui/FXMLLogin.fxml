@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?scenebuilder-stylesheet fxmllogin.css?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="490.0" prefHeight="400.0" prefWidth="490.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxgui.javafxguiController">
+    <stylesheets>
+        <URL value="@fxmllogin.css" />
+    </stylesheets> 
+    <children>
+      <AnchorPane fx:id="AnchorPaneRegist" minHeight="400.0" minWidth="490.0" prefHeight="400.0" prefWidth="490.0" styleClass="regFxmlClass" visible="false">
+         <children>
+            <Button fx:id="RegLog" layoutX="270.0" layoutY="341.0" mnemonicParsing="false" onAction="#RegLogButtonAction" prefHeight="45.0" prefWidth="175.0" text="На вхід" />
+            <Button layoutX="65.0" layoutY="341.0" mnemonicParsing="false" onAction="#RegButtonAction" prefHeight="45.0" prefWidth="175.0" text="Зареєструватись" />
+            <TextField fx:id="RegLogText" layoutX="65.0" layoutY="29.0" prefHeight="36.0" prefWidth="230.0" promptText="Логін" />
+            <TextField fx:id="RegNameText" layoutX="65.0" layoutY="80.0" prefHeight="36.0" prefWidth="380.0" promptText="Ім'я" />
+            <PasswordField fx:id="RegPassText" layoutX="65.0" layoutY="167.0" prefHeight="36.0" prefWidth="380.0" promptText="Пароль" />
+            <ImageView fx:id="LogImg1" fitHeight="20.0" fitWidth="20.0" layoutX="263.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="FirstRegHint" layoutX="263.0" layoutY="37.0" prefHeight="20.0" prefWidth="20.0" />
+            <ImageView fx:id="LogImg2" fitHeight="20.0" fitWidth="20.0" layoutX="410.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="SecondRegHint" layoutX="410.0" layoutY="88.0" prefHeight="20.0" prefWidth="20.0" />
+            <ImageView fx:id="LogImg3" fitHeight="20.0" fitWidth="20.0" layoutX="410.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="ThirdRegHint" layoutX="410.0" layoutY="175.0" prefHeight="20.0" prefWidth="20.0" />
+            <ImageView fx:id="BorderImg1" fitHeight="400.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/fon1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="BorderImg2" fitHeight="400.0" fitWidth="34.0" layoutX="460.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@client.media/fon1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="RegHint" layoutX="66.0" layoutY="315.0" prefHeight="17.0" prefWidth="359.0" wrapText="true" />
+            <ComboBox fx:id="ComboReg" layoutX="304.0" layoutY="29.0" prefHeight="36.0" prefWidth="140.0" />
+            <ComboBox fx:id="ComboRegDay" layoutX="68.0" layoutY="215.0" prefHeight="36.0" prefWidth="110.0" promptText="День" />
+            <ComboBox fx:id="ComboRegMonth" layoutX="183.0" layoutY="215.0" prefHeight="36.0" prefWidth="110.0" promptText="Місяць" />
+            <ComboBox fx:id="ComboRegYear" layoutX="302.0" layoutY="215.0" prefHeight="36.0" prefWidth="140.0" promptText="Рік" />
+            <ComboBox fx:id="ComboRegGender" layoutX="68.0" layoutY="267.0" prefHeight="36.0" prefWidth="140.0" promptText="Стать" />
+            <ImageView fx:id="LogImg4" fitHeight="20.0" fitWidth="20.0" layoutX="162.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="LogImg5" fitHeight="20.0" fitWidth="20.0" layoutX="396.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LabelRegHint" layoutX="75.0" layoutY="315.0" prefHeight="17.0" prefWidth="359.0" textFill="#ff0505">
+               <font>
+                  <Font name="Serif Regular" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="RegLastName" layoutX="65.0" layoutY="124.0" prefHeight="36.0" prefWidth="380.0" promptText="Прізвище" />
+            <ImageView fx:id="LogImg6" fitHeight="20.0" fitWidth="20.0" layoutX="410.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="SecondRegHint1" layoutX="410.0" layoutY="132.0" prefHeight="20.0" prefWidth="20.0" />
+         </children>
+      </AnchorPane>  
+      <AnchorPane fx:id="AnchorPaneLogin" minHeight="400.0" minWidth="490.0" prefHeight="400.0" prefWidth="490.0" styleClass="mainFxmlClass">
+         <children>
+            <Button fx:id="btnLogin" layoutX="55.0" layoutY="310.0" mnemonicParsing="false" onAction="#LoginbtnActionHandler" prefHeight="45.0" prefWidth="175.0" styleClass="LoginEnter" text="Увійти" />
+            <Button fx:id="LoginReg" layoutX="260.0" layoutY="309.0" mnemonicParsing="false" onAction="#LoginRegAction" prefHeight="45.0" prefWidth="175.0" styleClass="LoginReg" text="Реєстрація" />
+            <TextField fx:id="LoginText" layoutX="55.0" layoutY="172.0" onKeyPressed="#LoginKeyPress" prefHeight="36.0" prefWidth="230.0" promptText="Логін" styleClass="LoginText" />
+            <PasswordField fx:id="PassText" layoutX="55.0" layoutY="235.0" onKeyPressed="#PassKeyPress" prefHeight="36.0" prefWidth="380.0" promptText="Пароль" styleClass="PassText" />
+            <ImageView fx:id="LogImg7" fitHeight="20.0" fitWidth="20.0" layoutX="255.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="FirstLoginHint" layoutX="254.0" layoutY="180.0" prefHeight="20.0" prefWidth="20.0" />
+            <ImageView fx:id="LogImg8" fitHeight="20.0" fitWidth="20.0" layoutX="405.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/question.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="SecondLoginHint" layoutX="405.0" layoutY="243.0" prefHeight="20.0" prefWidth="20.0" />
+            <ComboBox fx:id="ComboMail" layoutX="295.0" layoutY="172.0" prefHeight="36.0" prefWidth="140.0" styleClass="ComboMail" />
+            <ImageView fx:id="BorderImg3" fitHeight="400.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@client.media/fon1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LabelHint" layoutX="56.0" layoutY="283.0" prefHeight="20.0" prefWidth="359.0" />
+            <ImageView fx:id="BorderImg4" fitHeight="400.0" fitWidth="34.0" layoutX="460.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@client.media/fon1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logoImage" fitHeight="150.0" fitWidth="250.0" layoutX="130.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children> 
+</StackPane>

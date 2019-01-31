@@ -1,0 +1,41 @@
+
+.mainFxmlClass{
+    -fx-background-color: white;
+}
+
+.button{
+   -fx-background-color: white;
+   -fx-border-color: yellowgreen;
+   -fx-background-radius: 10em;
+   -fx-border-radius: 10em;
+   -fx-text-fill: yellowgreen;
+   -fx-font-family: Segoe UI;
+   -fx-font-size: 14pt;
+   -fx-border-width: 2pt;
+}
+
+.text-field{
+   -fx-background-color: white;
+   -fx-border-color: yellowgreen;
+   -fx-background-radius: 10em;
+   -fx-border-radius: 10em;
+   -fx-font-family: Segoe UI;
+   -fx-font-size: 10pt;
+   -fx-border-width: 2pt;
+}
+
+.combo-box{
+    -fx-background-color: white;
+   -fx-border-color: yellowgreen;
+   -fx-background-radius: 10em;
+   -fx-border-radius: 10em;
+   -fx-text-fill: yellowgreen;
+   -fx-font-family: Segoe UI;
+   -fx-font-size: 10pt;
+   -fx-border-width: 2pt;   
+}
+
+#LabelTool{
+    -fx-text-fill: white;
+    -fx-font-size: 18pt;
+}

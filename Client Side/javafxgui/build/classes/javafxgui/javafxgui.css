@@ -1,0 +1,139 @@
+.text-field{
+    -fx-background-color: white;
+    -fx-border-color: yellowgreen;
+
+    -fx-font-family: Segoe UI;
+    -fx-font-size: 8pt;
+    -fx-border-width: 2pt;
+}
+
+.button{
+    -fx-background-color: yellowgreen;
+    -fx-text-fill: white;
+    -fx-font-family: Segoe UI;
+
+}   
+
+.VBox{
+    -fx-border-color: red;
+}
+.button:default{
+    -fx-effect:dropshadow(two-pass-box,white,5,10,1,1); 
+}
+
+#back{
+    -fx-background-color: yellowgreen;
+    -fx-text-fill: white;
+    -fx-font-family: Segoe UI;
+    -fx-font-size:24;
+    -fx-border-radius: 100em;
+    -fx-border-color: white;
+    -fx-border-width: 1pt;    
+}
+
+#labelRecive{
+    -fx-border-color: yellowgreen;
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+    -fx-font-family: Segoe UI;
+    -fx-font-size: 10pt;
+    -fx-border-width: 2pt;
+}
+
+#labelSend{
+    -fx-border-color: yellowgreen;
+    -fx-background-color: white;
+    -fx-background-radius: 2em;
+    -fx-border-radius: 2em;
+    -fx-font-family: Segoe UI;
+    -fx-font-size: 10pt;
+    -fx-border-width: 2pt;
+}
+
+#labelSearchTitle{
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-border-insets: 2px;
+    -fx-background-insets: 2px;
+    -fx-font-size: 8pt;
+
+}
+
+#labelSearchText{
+    -fx-padding: 5px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px; 
+    -fx-font-size: 8pt;
+}
+.titled-pane .title {
+    -fx-alignment: center-left; 
+    -fx-cursor: "hand";
+    -fx-focus-color: yellowgreen;
+    -fx-font-size: 12pt; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: white; 
+}
+
+.titled-pane:expanded { 
+    -fx-text-fill: white; 
+}
+
+.titled-pane:expanded > .title {
+    -fx-base: yellowgreen; 
+    -fx-text-fill: white; 
+}
+
+.titled-pane:hover > .title {
+    -fx-base: yellowgreen; 
+}
+
+.titled-pane:hover { 
+    -fx-text-fill: white; 
+}
+
+.titled-pane .arrow-button {
+
+    -fx-opacity: 1;
+}
+list-cell:filled:selected:focused, .list-cell:filled:selected {
+  
+}
+
+#vboxes{
+    -fx-background-color: null;
+    -fx-border-color: null;
+    -fx-text-fill: black;
+}
+#vboxes:focus{
+    -fx-background-color: null;
+    -fx-border-color: null;
+    -fx-text-fill: black;    
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+
+.list-cell:even { /* <=== changed to even */
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}
+
+#readed:hover {
+    -fx-color: -fx-base;
+}
+
+#readed:showing {
+    -fx-color: -fx-base;
+}
+
+#readed{
+  -fx-color: -fx-base;
+  -fx-effect: none;
+}

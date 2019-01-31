@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="ShowInfoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ImageView fx:id="ImageShow" fitHeight="250.0" fitWidth="250.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="InfoShow" layoutX="336.0" layoutY="34.0" prefHeight="230.0" prefWidth="250.0" />
+            <Label layoutX="14.0" layoutY="300.0" text="Ім'я :" />
+            <Label fx:id="NameShow" layoutX="14.0" layoutY="325.0" prefHeight="17.0" prefWidth="100.0" />
+            <Label layoutX="164.0" layoutY="303.0" text="Прізвище :" />
+            <Label fx:id="SecondNameShow" layoutX="164.0" layoutY="331.0" prefHeight="17.0" prefWidth="100.0" />
+            <Label layoutX="18.0" layoutY="394.0" text="Дата народження :" />
+            <Label fx:id="BirthdayShow" layoutX="18.0" layoutY="419.0" prefHeight="17.0" prefWidth="100.0" />
+            <Label layoutX="166.0" layoutY="397.0" prefHeight="17.0" prefWidth="100.0" />
+            <Label layoutX="166.0" layoutY="397.0" text="Стать :" />
+            <Label fx:id="GenderShow" layoutX="166.0" layoutY="425.0" prefHeight="17.0" prefWidth="105.0" />
+            <Label layoutX="271.0" layoutY="398.0" text="Країна :" />
+            <Label fx:id="CountryShow" layoutX="271.0" layoutY="423.0" prefHeight="17.0" prefWidth="100.0" />
+            <Button fx:id="AddFriendBtnShow" layoutX="461.0" layoutY="442.0" mnemonicParsing="false" onAction="#AddFriendFromShow" prefHeight="25.0" prefWidth="100.0" text="Добавити" visible="false" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="336.0" layoutY="14.0" prefHeight="17.0" prefWidth="250.0" text="Додаткова інформація" />
+         </children>
+      </AnchorPane>
+      <HBox fx:id="ClientInfoPane" prefHeight="516.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="115.0">
+               <children>
+                  <Button fx:id="MyProfileButton" mnemonicParsing="false" onMouseClicked="#onMyProfile" prefHeight="25.0" prefWidth="120.0" text="Мій профіль">
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Separator prefHeight="8.0" prefWidth="120.0" />
+                  <Button fx:id="OptionsButton" mnemonicParsing="false" onMouseClicked="#onOptionClick" prefHeight="25.0" prefWidth="120.0" text="Налаштування" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane fx:id="AnchorOption" prefHeight="520.0" prefWidth="470.0" style="-fx-background-color: white;">
+                     <children>
+                        <TextField fx:id="SetingName" layoutX="25.0" layoutY="310.0" prefHeight="25.0" prefWidth="200.0" promptText="Ім'я" />
+                        <TextField fx:id="SetingSurname" layoutX="27.0" layoutY="371.0" prefHeight="25.0" prefWidth="200.0" promptText="Прізвище" />
+                        <ImageView fx:id="SettingsImage" fitHeight="200.0" fitWidth="200.0" layoutX="21.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../CharChatResources/Pictures/defaulticon.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="ComboCountry" layoutX="254.0" layoutY="306.0" prefHeight="25.0" prefWidth="190.0" promptText="Країна" />
+                        <Label layoutX="25.0" layoutY="293.0" text="Ім'я" />
+                        <Label layoutX="27.0" layoutY="354.0" text="Прізвище" />
+                        <Label layoutX="254.0" layoutY="289.0" text="Країна" />
+                        <Label layoutX="254.0" layoutY="354.0" text="Стать" />
+                        <Label layoutX="27.0" layoutY="411.0" text="День народження" />
+                        <ComboBox fx:id="ComboDay" layoutX="24.0" layoutY="452.0" prefHeight="25.0" prefWidth="59.0" promptText="25" />
+                        <Label layoutX="27.0" layoutY="435.0" text="День:" />
+                        <ComboBox fx:id="ComboMonth" layoutX="90.0" layoutY="452.0" prefHeight="25.0" prefWidth="59.0" promptText="10" />
+                        <Label layoutX="90.0" layoutY="435.0" text="Місяць:" />
+                        <ComboBox fx:id="ComboYear" layoutX="155.0" layoutY="452.0" prefHeight="25.0" prefWidth="70.0" promptText="1999" />
+                        <Label layoutX="155.0" layoutY="435.0" text="Рік:" />
+                        <Button layoutX="339.0" layoutY="452.0" mnemonicParsing="false" onAction="#saveSettingsChages" prefHeight="25.0" prefWidth="105.0" text="Зберегти" />
+                        <Button layoutX="29.0" layoutY="248.0" mnemonicParsing="false" onAction="#changeSettingsImage" prefHeight="25.0" prefWidth="105.0" text="Змінити фото" />
+                        <TextArea fx:id="SettingsInfo" layoutX="256.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" scrollTop="-1.0" wrapText="true" />
+                        <Label layoutX="257.0" layoutY="14.0" prefHeight="17.0" prefWidth="190.0" text="Додаткова інформація" />
+                        <ComboBox fx:id="ComboGender" layoutX="256.0" layoutY="371.0" prefHeight="25.0" prefWidth="190.0" promptText="Стать" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="AncorProfile" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="100.0" text="Змінити пароль" />
+                        <Label layoutX="14.0" layoutY="53.0" text="Старий пароль" />
+                        <Label layoutX="16.0" layoutY="110.0" text="Новий пароль" />
+                        <Label layoutX="16.0" layoutY="163.0" text="Новий пароль" />
+                        <TextField fx:id="OldPassword" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="180.0" promptText="Старий пароль" />
+                        <TextField fx:id="NewPassword" layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="180.0" promptText="Новий пароль" />
+                        <TextField fx:id="RepeateOldPassword" layoutX="14.0" layoutY="180.0" prefHeight="25.0" prefWidth="180.0" promptText="Новий пароль" />
+                        <Button layoutX="210.0" layoutY="180.0" mnemonicParsing="false" onAction="#ChangePasswordButton" prefHeight="25.0" prefWidth="115.0" text="Змінити пароль" />
+                        <Label layoutX="16.0" layoutY="232.0" prefHeight="17.0" prefWidth="154.0" text="Шлях завантаження файлів" />
+                        <TextField fx:id="PathTextField" layoutX="19.0" layoutY="258.0" prefHeight="25.0" prefWidth="300.0" visible="false" />
+                        <Button layoutX="338.0" layoutY="258.0" mnemonicParsing="false" onAction="#changePathButton" prefHeight="25.0" prefWidth="105.0" text="Змінити шлях" />
+                        <ColorPicker layoutX="257.0" layoutY="312.0" />
+                        <AnchorPane layoutX="19.0" layoutY="312.0" prefHeight="180.0" prefWidth="200.0" />
+                        <Label layoutX="28.0" layoutY="295.0" prefHeight="17.0" prefWidth="180.0" text="Колір фону списка повідомлень" />
+                        <Button layoutX="255.0" layoutY="377.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Змінити колір" />
+                        <Label fx:id="changePasswordError" layoutX="14.0" layoutY="205.0" prefHeight="17.0" prefWidth="180.0" textFill="#fc0b07" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</StackPane>
